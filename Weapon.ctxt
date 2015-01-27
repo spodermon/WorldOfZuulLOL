@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=name\ description\ weight\ damage
+comment0.target=Weapon(java.lang.String,\ java.lang.String,\ int,\ int)
+numComments=1

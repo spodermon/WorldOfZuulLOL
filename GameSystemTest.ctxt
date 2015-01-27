@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ setUp()
+comment0.text=\n\ \ \ \ public\ GameSystemTest()\n\ \ \ \ {\n\n\ \ \ \ }\n\n\ \ \ \ /**\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment1.params=
+comment1.target=void\ backWithSecondWord()
+numComments=2

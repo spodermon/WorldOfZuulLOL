@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=roomName\ information
+comment0.target=Room(java.lang.String,\ java.lang.String)
+comment0.text=\n\ Create\ a\ room\ described\ "description".\ Initially,\ it\ has\n\ no\ exits.\ "description"\ is\ something\ like\ "a\ kitchen"\ or\n\ "an\ open\ court\ yard".\n\ @param\ description\ The\ room's\ description.\n
+comment1.params=roomName\ information\ item
+comment1.target=Room(java.lang.String,\ java.lang.String,\ Item)
+comment2.params=
+comment2.target=java.lang.String\ getInformation()
+comment3.params=direction\ room
+comment3.target=void\ setExit(java.lang.String,\ Room)
+comment3.text=\n\ Define\ the\ exits\ of\ this\ room.\ \ Every\ direction\ either\ leads\n\ to\ another\ room\ or\ is\ null\ (no\ exit\ there).\n\ @param\ direction\:\ direction\ to\ walk\ to\n\ @param\ room\:\ room\ coming\ into\n
+comment4.params=
+comment4.target=java.lang.String\ getRoomName()
+comment4.text=\n\ @return\ The\ description\ of\ the\ room.\n
+comment5.params=direction
+comment5.target=Room\ getExit(java.lang.String)
+comment5.text=\n\ @direction\:\ direction\ to\ go\ to.\n\ @return\ room\ in\ entered\ direction.\n
+comment6.params=
+comment6.target=java.lang.String\ getAllExitsAsString()
+comment6.text=\n\ @return\ All\ exits\ of\ the\ room.\n
+comment7.params=item
+comment7.target=void\ addItemToRoom(Item)
+comment8.params=
+comment8.target=java.lang.String\ getAllExitsWithDirectionsAsString()
+comment9.params=
+comment9.target=java.lang.String\ getAllItemsInRoom()
+numComments=10

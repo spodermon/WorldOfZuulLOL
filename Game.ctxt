@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=initialRoom
+comment0.target=Game(Room)
+comment1.params=currentRoom
+comment1.target=void\ setCurrentRoom(Room)
+comment2.params=
+comment2.target=Room\ getCurrentRoom()
+comment3.params=
+comment3.target=java.util.Stack\ getRoomsVisitedStack()
+comment4.params=
+comment4.target=java.lang.String\ goBack()
+comment5.params=direction
+comment5.target=java.lang.String\ changeRoom(java.lang.String)
+numComments=6
