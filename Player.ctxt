@@ -3,4 +3,5 @@ comment0.params=
 comment0.target=Player()
 comment1.params=
 comment1.target=java.lang.String\ getAllItems()
+comment1.text=\n\ Implement\ an\ "items"\ command\ that\ prints\ out\ all\ items\ \n\ currently\ carried\ with\ their\ weights,\ and\ the\ total\ weight.\n
 numComments=2

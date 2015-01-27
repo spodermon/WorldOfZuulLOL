@@ -13,8 +13,12 @@ public class Player {
         maxWeight = 10;
     }
 
+    /**
+     * Implement an "items" command that prints out all items 
+     * currently carried with their weights, and the total weight.
+     */
     public String getAllItems() {
-        String result = "Items:\n";
+        String result = "Your Inventory:\n";
         boolean itemsInList = false;
         for(Item actualItem : itemList) {
             result  += "Item: " + actualItem.getName() + "\n";
