@@ -29,7 +29,13 @@ public enum CommandWords{
     
     BACK("back"),
     
-    ITEMS("items");
+    ITEMS("items"),
+    
+    TAKE("take"),
+    
+    DROP("drop"),
+    
+    DROPALL("dropall");
     
     private String word;
 

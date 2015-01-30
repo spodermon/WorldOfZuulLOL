@@ -32,4 +32,19 @@ public class Player {
 
         return result;
     }
+    
+    public void addItemToInventory(Item item) {
+        if (item.getWeight() <= inventoryCapacity())
+            itemList.add(item);
+        else
+            System.out.println("you cant carray anymore!");
+    }
+    
+    public int inventoryCapacity() {
+        int totalWeight = 0;
+        for(Item actualItem : itemList) {
+            totalWeight += actualItem.getWeight();
+        }
+        return totalWeight;
+    }
 }

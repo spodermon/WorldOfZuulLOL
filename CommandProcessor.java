@@ -41,6 +41,15 @@ public class CommandProcessor {
             case BACK:
             result = goBack(game);
             break;
+            case TAKE:
+            result = takeItem(game.getCurrentRoom(), command, player);
+            break;
+            case DROP:
+            result = dropItem();
+            break;
+            case DROPALL:
+            result = dropAllItems();
+            break;
             case ITEMS:
             result = listAllItemsOfPlayer(player);
             break;
@@ -110,13 +119,25 @@ public class CommandProcessor {
     private String dance() {
         return "You start to dance furiously";
     }
-    
+
     private String goBack(Game game) {
         return game.goBack();
     }
+
+    private String takeItem(Room currentRoom, Command command, Player player) {
+        Item item = currentRoom.takeItem(command.getSecondWord());
+        return "You added " + command.getSecondWord() + " to your inventory.";    
+    }
+
+    private String dropItem() {
+        return "something";
+    }
     
-    private String listAllItemsOfPlayer(Player player)
-    {
+    private String dropAllItems() {
+        return "something";
+    }
+    
+    private String listAllItemsOfPlayer(Player player) {
         return "something";
     }
 }
