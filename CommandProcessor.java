@@ -45,10 +45,10 @@ public class CommandProcessor {
             result = takeItem(game.getCurrentRoom(), command, player);
             break;
             case DROP:
-            result = dropItem();
+            result = dropItem(command, player, game.getCurrentRoom());
             break;
             case DROPALL:
-            result = dropAllItems();
+            result = dropAllItems(player, game.getCurrentRoom());
             break;
             case ITEMS:
             result = listAllItemsOfPlayer(player);
@@ -126,18 +126,29 @@ public class CommandProcessor {
 
     private String takeItem(Room currentRoom, Command command, Player player) {
         Item item = currentRoom.takeItem(command.getSecondWord());
-        return "You added " + command.getSecondWord() + " to your inventory.";    
+        if (item == null)
+            return "No such Item in this Room.";
+        else
+            player.addItemToInventory(item);
+            return "";    
     }
 
-    private String dropItem() {
-        return "something";
+    private String dropItem(Command command, Player player, Room currentRoom) {
+        Item itemToDrop = player.dropItemFromInventory(command.getSecondWord());
+        if (itemToDrop != null) {
+            currentRoom.addItemToRoom(itemToDrop);
+            return "Item removed form inventory.";
+        }
+        else
+            return "could not remove item from inventory.";
     }
     
-    private String dropAllItems() {
-        return "something";
+    private String dropAllItems(Player player, Room currentRoom) {
+        player.dropAllItemsFromInvetroy(currentRoom);
+        return "you droped all the items form your invetory";
     }
     
     private String listAllItemsOfPlayer(Player player) {
-        return "something";
+        return player.getAllItems();
     }
 }

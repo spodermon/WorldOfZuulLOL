@@ -32,19 +32,38 @@ public class Player {
 
         return result;
     }
-    
+
     public void addItemToInventory(Item item) {
-        if (item.getWeight() <= inventoryCapacity())
+        if (item.getWeight() <= inventoryCapacity()){
             itemList.add(item);
+            System.out.println("You added " + item.getName() + " to your inventory.");
+        }
         else
             System.out.println("you cant carray anymore!");
     }
-    
+
     public int inventoryCapacity() {
         int totalWeight = 0;
         for(Item actualItem : itemList) {
             totalWeight += actualItem.getWeight();
         }
-        return totalWeight;
+        return maxWeight - totalWeight;
+    }
+
+    public Item dropItemFromInventory(String itemName) {
+        for(Item actualItem : itemList) {
+            if (actualItem.getName().equals(itemName)) {
+                itemList.remove(actualItem);
+                return actualItem;
+            }
+        }
+        return null;
+    }
+
+    public void dropAllItemsFromInvetroy(Room currentRoom) {
+        for(Item actualItem : itemList) {
+            currentRoom.addItemToRoom(actualItem);
+        }
+        itemList.clear();
     }
 }

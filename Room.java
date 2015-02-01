@@ -105,15 +105,18 @@ public class Room {
 
         return result;
     }
-    
+
     public Item takeItem(String name) {
         Item returnItem = null;
         for(Item actualItem : itemList) {
             if(actualItem.getName().equals(name)) {
                 returnItem = actualItem;
-                itemList.remove(actualItem);
             }
         }
+        
+        if(returnItem != null)
+            itemList.remove(returnItem);
+            
         return returnItem;
     }
 }
